@@ -1,0 +1,41 @@
+body {
+	font-size: 18px;
+	font-weight: 300, 400, 700;
+	font-family: [Public Sans](https://fonts.google.com/specimen/Public+Sans);
+}
+
+._header {
+	height: 50px;
+	background: black;
+
+}
+
+.logo {
+	margin-left: 120px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.links li {
+	list-style: none;
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: hsl(220deg 2% 62%);
+}
+
+.link-box {
+	margin-left: 490px;
+	margin-top: -60px;
+}
+
+._btn {
+	float: right;
+	margin-right: 244px;
+	margin-top: -42px;
+	border-radius: 24px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
