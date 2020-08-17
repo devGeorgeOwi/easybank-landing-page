@@ -6,7 +6,8 @@ body {
 
 ._header {
 	height: 50px;
-	background: black;
+	background: white;
+	border-bottom: 1px solid grey;
 
 }
 
@@ -24,6 +25,16 @@ body {
 	color: hsl(220deg 2% 62%);
 }
 
+.links li a {
+	text-decoration: none;
+	color: hsl(220deg 2% 62%); 
+}
+
+.links li a:hover  {
+	text-decoration: underline;
+	color: hsl(220deg 2% 62%); 
+}
+
 .link-box {
 	margin-left: 490px;
 	margin-top: -60px;
@@ -38,4 +49,7 @@ body {
 	padding-bottom: 6px;
 	padding-left: 16px;
 	padding-right: 16px;
+	background: hsl(159deg 61% 48%);
+	color: white;
+	border: hsl(159deg 61% 48%);
 }
