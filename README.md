@@ -1,6 +1,5 @@
 # easybank-landing-page
-Landing Page designed for Easy Bank.
-Built with HTML, CSS & JavaScript
+A Header for the Landing Page of Easy Bank.
 
 Contributors to this Project and their contributions
                     
