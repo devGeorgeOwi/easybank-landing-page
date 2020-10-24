@@ -16,21 +16,18 @@ h3 {
 	color: #2f2f4f;
 }
 /* CSS Variables */
-/*:root {
-  --
-}*/
-/* General Button Style */
-._btn, 
-.banner-btn, 
-.footer-btn {
-    background-image: 
-        linear-gradient(45deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
-    border: none;
-    border-radius: 24px;
-    color: white; 
-    outline: none;
-    padding: 12px 38px 12px 38px; 
+:root {
+  --highlight-color: invert(0.13) sepia(0.5) saturate(14) hue-rotate(86.4deg) brightness(0.83);
+  --button-color: linear-gradient(45deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  --button-curve: 24px;
+  --button-spacing: 12px 38px 12px 38px;
+  --button-outline: none;
+  --button-border: none;
+  --button-textcolor: #fff;
+  --button-stretch: #2fc791 ;
+  --highlight-cursor: pointer;
 }
+/* General Button Style */
 
 /* Header Styles */
 ._header {
@@ -45,7 +42,7 @@ h3 {
     z-index: 2;
 }
 ._header img:hover {
-    cursor: pointer;
+    cursor: var(--highlight-cursor);
 }
 .links {
     position: relative;
@@ -59,11 +56,20 @@ h3 {
 .links li a {
 	text-decoration: none;
 	color: hsl(220deg 2% 62%);
-
 }
 .links a:hover {
-    cursor: pointer;
-    color: hsl(136, 65%, 51%);
+    cursor: var(--highlight-cursor);
+    filter: var(--highlight-color);
+    /*text-decoration: underline;
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 10px;*/
+   /* text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-skip: ink;*/
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+    padding-bottom: 4px;
+
 }
 .link-box {
 	margin-left: 454px;
@@ -71,14 +77,22 @@ h3 {
 	bottom: 59px;
 }
 ._btn {
+    position: relative;
 	float: right;
     margin: -47px 177px 0 0;
-    position: relative;
+    padding: var(--button-spacing);
+    border: var(--button-border);
+    border-radius: var(--button-curve);
+    outline: var(--button-outline);
+    background-image: var(--button-color);
+    color: var(--button-textcolor);
+    cursor: var(--highlight-cursor);
     z-index: 2;
+    
 }
  .head-btn-div button:hover {
-    cursor: pointer;
-    border: 1px solid hsl(136, 65%, 51%);
+    cursor: var(--highlight-cursor);
+    border: 1px solid var(--button-stretch);
 }
 
 /* first section styles */
@@ -106,9 +120,9 @@ h3 {
     z-index: -1;
 }
 .banner-text {
-	font-family: Public Sans;
     padding-right: 353px;
     margin: 10px 0 0 145px;
+    font-size: 16px;
 }
 h3.banner-title {
 	font-size: 43px;
@@ -118,11 +132,18 @@ h3.banner-title {
 .banner-btn {
 	margin: 20px 0 0 145px;
     position: absolute;
+    padding: var(--button-spacing);
+    border: var(--button-border);
+    border-radius: var(--button-curve);
+    outline: var(--button-outline);
+    background-image: var(--button-color);
+    color: var(--button-textcolor);
+    cursor: var(--highlight-cursor);
     z-index: 2;
 }
 .btn-div button:hover {
     cursor: pointer;
-    border: 2px solid hsl(136, 65%, 51%);
+    border: 1px solid var(--button-stretch);
 }
 
 /* second section styles */
@@ -198,6 +219,8 @@ img.card-content-img {
     border-radius: 8px;
     margin: 0px 4px;
     padding: 0px 5px;
+    position: relative;
+    z-index: 3;
 }
 
 label.card-content-author {
@@ -218,12 +241,16 @@ p.card-content-text {
     font-size: 12px;
     padding-left: 15px;
 }
+.card-content h6:hover {
+    cursor: pointer;
+    color: var(--button-stretch);
+}
 
 /*  CSS style for the first card with a diiferent image size */
 
 .card-content-img-currency {
 	position: relative;
-    left: 0px;
+    left: 0;
     top: 10px;
     height: 166px;
     width: 252px;
@@ -256,19 +283,27 @@ p.card-content-text {
 	display: flex;
 	justify-content: space-around;
 	background: #2f2d4af2;
+    height: 200px;
 }
 
 .footer-btn {
-	margin: 39px 0 0 -40px;
+	margin: 56px 0 0 -40px;
+    padding: var(--button-spacing);
+    border: var(--button-border);
+    border-radius: var(--button-curve);
+    outline: var(--button-outline);
+    background-image: var(--button-color);
+    color: var(--button-textcolor);
+    cursor: var(--highlight-cursor);
 }
 .footer-content-4 button:hover {
-    cursor: pointer;
-    border: 2px solid hsl(136, 65%, 51%);
+    cursor: var(--highlight-cursor);
+    border: 1px solid var(--button-stretch);
 }
 
 .footer-copy {
     font-size: 16px;
-    margin: 100px 0 0 -516px;
+    margin: 136px 0 0 -516px;
     padding: 0px 155px 0px 0px;
 }
 
@@ -288,19 +323,22 @@ p.card-content-text {
 
 .footer-links {
 	padding-left: 100px;
+    margin-top: 65px;
 }
 .footer-links li {
 	list-style: none;
-    color: white;
+    color: var(--button-textcolor);
     margin: 40px 0 -32px 0;
 }
 .footer-links li a {
 	text-decoration: none;
-	color: white;
+	color: var(--button-textcolor);
+    font-size: 14px;
+    font-weight: normal;
 }
 .footer-links a:hover {
-    cursor: pointer;
-    color: hsl(136, 65%, 51%);
+    cursor: var(--highlight-cursor);
+    filter: var(--highlight-color);
 }
 .footer-social-links {
     padding: 20px 0 0 143px;
@@ -310,13 +348,20 @@ p.card-content-text {
 	display: inline;
 	margin: 0px 2px;
 }
-.footer-social-links img:hover {
-    cursor: pointer;
-    transition: rotate(2);
+
+.footer-social-links a {
+    background: none;
+    mask-size: cover;
+}
+.footer-social-links a:hover, 
+.footer-social-links a:focus {
+    cursor: var(--highlight-cursor);
+    filter: var(--highlight-color);
+    
 }
 .footer-logo {
-    margin: 40px 0 0 145px;
-    fill: white;
+    margin: 65px 0 0 145px;
+    /*fill: white;*/
 }
 
 
